@@ -20,13 +20,13 @@ $font-size: 30px;
 
 .calendar {
   $days-list: (
-    "sun": 0,
-    "mon": 1,
-    "tue": 2,
-    "wed": 3,
-    "thu": 4,
-    "fri": 5,
-    "sat": 6
+    'sun': 0,
+    'mon': 1,
+    'tue': 2,
+    'wed': 3,
+    'thu': 4,
+    'fri': 5,
+    'sat': 6,
   );
 
   display: flex;
@@ -52,7 +52,9 @@ $font-size: 30px;
 
     font-family: $font-family;
     font-size: $font-size;
-    transition: background-color $transition-speed, transform $transition-speed;
+    transition:
+      background-color $transition-speed,
+      transform $transition-speed;
 
     &:hover {
       transform: translateY(-20px);
@@ -61,7 +63,7 @@ $font-size: 30px;
 
     @for $i from 1 through 31 {
       &:nth-child(#{$i})::before {
-        content: "#{$i}";
+        content: '#{$i}';
       }
     }
   }
